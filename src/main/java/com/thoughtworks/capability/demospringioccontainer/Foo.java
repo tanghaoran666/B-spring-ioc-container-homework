@@ -5,8 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Foo {
+
+    private Bar bar;
+
     @Autowired
-    Bar bar;
+    public void setBar(Bar bar) {
+        this.bar = bar;
+    }
 
     public void hi() {
         System.out.println("Hi, " + bar.name());
